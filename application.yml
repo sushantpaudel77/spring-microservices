@@ -1,1 +1,26 @@
+spring:
+  application:
+    name: config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/  
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    health:
+      show-details: always
 
