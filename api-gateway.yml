@@ -33,4 +33,4 @@ spring:
                 isEnabled: true
 
 jwt:
-  secretKey: ${JWT_SECRET_KEY}
+  secretKey: 03c674b5ec2576230b5b3b94a9fa1606720ccce6f1a617dadc0399559555ee8f
