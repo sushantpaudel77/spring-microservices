@@ -6,7 +6,7 @@ spring:
     gateway:
       routes:
         - id: order-service
-          uri: lb://ORDER-SERVICE
+          uri: ${ORDER_SERVICE_URI:lb://ORDER-SERVICE}
           predicates:
             - Path=/api/v1/orders/**
           filters:
@@ -22,7 +22,7 @@ spring:
                   - SUPER_ADMIN
 
         - id: inventory-service
-          uri: lb://INVENTORY-SERVICE
+          uri: ${INVENTORY_SERVICE_URI:lb://INVENTORY-SERVICE}
           predicates:
             - Path=/api/v1/inventory/**
           filters:
